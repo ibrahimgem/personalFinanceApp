@@ -8,6 +8,14 @@ st.set_page_config(page_title="Personal Finance Dashboard", layout="wide")
 # Title and description
 st.title("Personal Finance Dashboard")
 st.write("Upload your transaction CSV file to monitor income, expenses, and savings.")
+st.write("Your CSV file should have columns such as:")
+st.markdown("""
+| Date       | Description | Category | Amount |
+|------------|-------------|----------|--------|
+| 2025-01-01 | Salary      | Income   | 5000   |
+| 2025-01-05 | Groceries   | Food     | -150   |
+| 2025-01-10 | Rent        | Living   | -1200  |
+""")
 
 # Function to load data with caching for performance
 @st.cache_data
